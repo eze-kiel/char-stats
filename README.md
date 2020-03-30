@@ -19,6 +19,10 @@ $ go run main.go -f text.txt -o output
 ```
 This will analyse `text.txt` and display the results in a graph named `output.png`. You don't have to give the extension of the output.
 
+## Example
+Example with *La comédie humaine vol. 1* from Honoré de Balzac :
+![](graph.png)
+
 ## Packages required
 
 * [github.com/namsral/flag](https://github.com/namsral/flag)
