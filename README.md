@@ -11,7 +11,7 @@ options :
 	-f <folder name>
 		file which will be analysed
 	-o <graph name>
-		name of the output graph (.png)
+		name of the output graph
 ```
 Typical use :
 ```Shell
