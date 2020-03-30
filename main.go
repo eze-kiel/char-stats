@@ -46,18 +46,20 @@ func main() {
 	sort.Strings(keys)
 
 	for _, k := range keys {
+		// Transform real value in percentage and append them to cvalues
 		cvalues = append(cvalues, chart.Value{Value: float64(m[k] * 100 / total), Label: k})
 	}
 
+	// Create the bar graph
 	graph := chart.BarChart{
 		Title: "Occurences",
 		Background: chart.Style{
 			Padding: chart.Box{
-				Top: 40,
+				Top: 30,
 			},
 		},
 		Height:   512,
-		BarWidth: 60,
+		BarWidth: 30,
 		Bars:     cvalues,
 	}
 
