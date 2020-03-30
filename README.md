@@ -12,6 +12,9 @@ options :
 		file which will be analysed
 	-output <graph name>
 		name of the output graph
+	-layout <layout type>
+		alpha : alphabetical order (default)
+		asc : ascending order
 ```
 Typical use :
 ```Shell
