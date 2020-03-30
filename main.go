@@ -16,8 +16,8 @@ func main() {
 	m := make(map[string]int)
 	total := 0
 	var file, graphname string
-	flag.StringVar(&file, "f", "", "file which contain the data")
-	flag.StringVar(&graphname, "o", "output", "name of the output file")
+	flag.StringVar(&file, "file", "", "file which contain the data")
+	flag.StringVar(&graphname, "output", "output.png", "name of the output file")
 	flag.Parse()
 
 	content, err := ioutil.ReadFile(file)
@@ -63,9 +63,9 @@ func main() {
 		Bars:     cvalues,
 	}
 
-	f, _ := os.Create(graphname + ".png")
+	f, _ := os.Create(graphname)
 	defer f.Close()
 	graph.Render(chart.PNG, f)
 
-	fmt.Printf("[*] graph generated : %s.png\n", graphname)
+	fmt.Printf("[*] graph generated : %s\n", graphname)
 }
