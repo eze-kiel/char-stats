@@ -65,7 +65,7 @@ func main() {
 	case "asc":
 		for _, v := range values {
 			// Transform real value in percentage and append them to cvalues
-			key, _ := mapkey(m, v)
+			key := mapkey(m, v)
 			cvalues = append(cvalues, chart.Value{Value: float64(v * 100 / total), Label: key})
 		}
 	}
@@ -90,13 +90,12 @@ func main() {
 	fmt.Printf("[*] graph generated : %s\n", graphname)
 }
 
-func mapkey(m map[string]int, value int) (key string, mback map[string]int) {
+func mapkey(m map[string]int, value int) (key string) {
 	for k, v := range m {
 		if v == value {
 			key = k
 			delete(m, key) // Remove the entry to avoid duplicated labels
-			mback = m
-			return key, mback
+			return key
 		}
 	}
 	return
