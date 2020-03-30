@@ -21,8 +21,8 @@ This will analyse `text.txt` and display the results in a graph named `output.pn
 
 ## Packages required
 
-* [github.com/namsral/flag](github.com/namsral/flag)
-* [github.com/wcharczuk/go-chart](github.com/wcharczuk/go-chart)
+* [github.com/namsral/flag](https://github.com/namsral/flag)
+* [github.com/wcharczuk/go-chart](https://github.com/wcharczuk/go-chart)
 
 ## Author
 
