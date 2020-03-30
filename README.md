@@ -18,6 +18,12 @@ Typical use :
 $ go run main.go -f text.txt -o output
 ```
 This will analyse `text.txt` and display the results in a graph named `output.png`. You don't have to give the extension of the output.
+
+## Packages required
+
+* github.com/namsral/flag
+* github.com/wcharczuk/go-chart
+
 ## Author
 
 Written by ezekiel.
