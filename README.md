@@ -1,6 +1,7 @@
 # char-stats
 
 ![Licence](https://img.shields.io/badge/License-GPL-brightgreen)
+
 Characters frequency analyser for mono-alphabetical substitution encryption
 
 ## Usage
