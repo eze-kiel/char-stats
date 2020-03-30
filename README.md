@@ -8,9 +8,9 @@ Characters frequency analyser for mono-alphabetical substitution encryption.
 
 ```Shell
 options :
-	-f <folder name>
+	-file <folder name>
 		file which will be analysed
-	-o <graph name>
+	-output <graph name>
 		name of the output graph
 ```
 Typical use :
