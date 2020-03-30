@@ -15,9 +15,9 @@ options :
 ```
 Typical use :
 ```Shell
-$ go run main.go -f text.txt -o output
+$ go run main.go -f text.txt -o output.png
 ```
-This will analyse `text.txt` and display the results in a graph named `output.png`. You don't have to give the extension of the output.
+This will analyse `text.txt` and display the results in a graph named `output.png`. You have have to specify the extension of the output (default : PNG).
 
 ## Example
 Example with *La comédie humaine vol. 1* from Honoré de Balzac :
