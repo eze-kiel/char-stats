@@ -2,7 +2,7 @@
 
 ![Licence](https://img.shields.io/badge/License-GPL-brightgreen)
 
-Characters frequency analyser for mono-alphabetical substitution encryption.
+Generation of graphs according to the frequency of apparition of characters in a file. Can be used for cracking mono-alphabetical substitution encryption.
 
 ## Usage
 
