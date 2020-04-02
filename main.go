@@ -72,7 +72,7 @@ func main() {
 
 	// Create the bar graph
 	graph := chart.BarChart{
-		Title: "Occurences",
+		Title: "Occurences (in %)",
 		Background: chart.Style{
 			Padding: chart.Box{
 				Top: 30,

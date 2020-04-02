@@ -20,7 +20,7 @@ Typical use :
 ```Shell
 $ go run main.go -file text.txt -output graph.png
 ```
-This will analyse `text.txt` and display the results in a graph named `graph.png`. You have have to specify the extension of the output (default : PNG).
+This will analyse `text.txt` and display the results in a graph named `graph.png`. You have to specify the extension of the output (default : PNG).
 
 ## Example
 Example with *La comédie humaine vol. 1* from Honoré de Balzac, in french :
