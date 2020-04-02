@@ -26,9 +26,6 @@ This will analyse `text.txt` and display the results in a graph named `graph.png
 Example with *La comédie humaine vol. 1* from Honoré de Balzac, in french :
 ![](graph.png)
 
-## Packages required
-See [go.mod](go.mod).
-
 ## Author
 
 Written by ezekiel.
