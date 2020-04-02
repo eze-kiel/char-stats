@@ -27,9 +27,7 @@ Example with *La comédie humaine vol. 1* from Honoré de Balzac, in french :
 ![](graph.png)
 
 ## Packages required
-
-* [github.com/namsral/flag](https://github.com/namsral/flag)
-* [github.com/wcharczuk/go-chart](https://github.com/wcharczuk/go-chart)
+See [go.mod](go.mod).
 
 ## Author
 
