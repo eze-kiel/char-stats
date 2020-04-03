@@ -63,6 +63,8 @@ func main() {
 
 }
 
+// Functions
+
 func mapkey(m map[string]int, value int) (key string) {
 	for k, v := range m {
 		if v == value {
