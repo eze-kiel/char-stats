@@ -59,6 +59,7 @@ func main() {
 		}
 	}
 
+	getMostUsedChar(m)
 	graphCreation(cvalues, graphname)
 
 }
@@ -76,6 +77,7 @@ func mapkey(m map[string]int, value int) (key string) {
 	return
 }
 
+// Create two arrays for the map's keys and values, and sort them
 func sortKeysAndValues(m map[string]int) ([]string, []int) {
 	values := []int{}
 	for v := range m {
@@ -109,5 +111,17 @@ func graphCreation(values []chart.Value, graphname string) {
 	defer f.Close()
 	graph.Render(chart.PNG, f)
 
-	fmt.Printf("[*] graph generated : %s\n", graphname)
+	fmt.Printf("[*] graph generated: %s\n", graphname)
+}
+
+func getMostUsedChar(m map[string]int) (mostUsedChar string) {
+	maxValue := 0
+	for key, value := range m {
+		if value > maxValue {
+			mostUsedChar = key
+			maxValue = value
+		}
+	}
+	fmt.Printf("[*] most used character: %s\n", mostUsedChar)
+	return mostUsedChar
 }
