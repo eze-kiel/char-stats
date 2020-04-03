@@ -44,17 +44,7 @@ func main() {
 
 	cvalues := []chart.Value{}
 
-	values := []int{}
-	for v := range m {
-		values = append(values, m[v])
-	}
-	sort.Ints(values)
-
-	keys := []string{}
-	for k := range m {
-		keys = append(keys, k)
-	}
-	sort.Strings(keys)
+	keys, values := sortKeysAndValues(m)
 
 	switch layout {
 	case "alpha":
@@ -82,6 +72,22 @@ func mapkey(m map[string]int, value int) (key string) {
 		}
 	}
 	return
+}
+
+func sortKeysAndValues(m map[string]int) ([]string, []int) {
+	values := []int{}
+	for v := range m {
+		values = append(values, m[v])
+	}
+	sort.Ints(values)
+
+	keys := []string{}
+	for k := range m {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+
+	return keys, values
 }
 
 func graphCreation(values []chart.Value, graphname string) {
