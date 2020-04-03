@@ -66,6 +66,7 @@ func main() {
 
 // Functions
 
+// Return the key associated to a given value, and remove it from the map
 func mapkey(m map[string]int, value int) (key string) {
 	for k, v := range m {
 		if v == value {
@@ -114,6 +115,7 @@ func graphCreation(values []chart.Value, graphname string) {
 	fmt.Printf("[*] graph generated: %s\n", graphname)
 }
 
+// Return the most used used character present in the map
 func getMostUsedChar(m map[string]int) (mostUsedChar string) {
 	maxValue := 0
 	for key, value := range m {
