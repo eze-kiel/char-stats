@@ -59,13 +59,11 @@ func main() {
 	switch layout {
 	case "alpha":
 		for _, k := range keys {
-			// Transform real value in percentage and append them to cvalues
 			cvalues = append(cvalues, chart.Value{Value: float64(m[k] * 100 / total), Label: k})
 		}
 
 	case "asc":
 		for _, v := range values {
-			// Transform real value in percentage and append them to cvalues
 			key := mapkey(m, v)
 			cvalues = append(cvalues, chart.Value{Value: float64(v * 100 / total), Label: key})
 		}
