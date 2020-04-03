@@ -16,6 +16,7 @@ func main() {
 	m := make(map[string]int)
 	total := 0
 	var file, graphname, layout string
+
 	flag.StringVar(&file, "file", "", "file which contain the data")
 	flag.StringVar(&graphname, "output", "output.png", "name of the output file")
 	flag.StringVar(&layout, "layout", "alpha", "values layout on the graph : alpha, asc")
@@ -70,24 +71,8 @@ func main() {
 		}
 	}
 
-	// Create the bar graph
-	graph := chart.BarChart{
-		Title: "Occurences (in %)",
-		Background: chart.Style{
-			Padding: chart.Box{
-				Top: 30,
-			},
-		},
-		Height:   512,
-		BarWidth: 30,
-		Bars:     cvalues,
-	}
+	graphCreation(cvalues, graphname)
 
-	f, _ := os.Create(graphname)
-	defer f.Close()
-	graph.Render(chart.PNG, f)
-
-	fmt.Printf("[*] graph generated : %s\n", graphname)
 }
 
 func mapkey(m map[string]int, value int) (key string) {
@@ -99,4 +84,24 @@ func mapkey(m map[string]int, value int) (key string) {
 		}
 	}
 	return
+}
+
+func graphCreation(values []chart.Value, graphname string) {
+	graph := chart.BarChart{
+		Title: "Occurences (in %)",
+		Background: chart.Style{
+			Padding: chart.Box{
+				Top: 30,
+			},
+		},
+		Height:   512,
+		BarWidth: 30,
+		Bars:     values,
+	}
+
+	f, _ := os.Create(graphname)
+	defer f.Close()
+	graph.Render(chart.PNG, f)
+
+	fmt.Printf("[*] graph generated : %s\n", graphname)
 }
