@@ -23,13 +23,13 @@ func main() {
 	flag.StringVar(&layout, "layout", "alpha", "values layout on the graph : alpha, asc")
 	flag.Parse()
 
-	fmt.Println("[*] reading file...")
+	fmt.Printf("[*] reading file...\n")
 	content, err := ioutil.ReadFile(file)
 	if err != nil {
 		log.Fatalf("error while opening the file: %v", err)
 	}
 
-	fmt.Println("[*] processing...")
+	fmt.Printf("[*] processing...\n")
 	// Collect characters between 'a' and 'z'
 	for x := 0; x < len(content); x++ {
 		carac := rune(content[x])
@@ -40,8 +40,7 @@ func main() {
 		}
 	}
 
-	fmt.Println(m)
-	fmt.Println("[*] charaters counted: ", total)
+	fmt.Printf("[*] charaters counted: %d\n", total)
 
 	cvalues := []chart.Value{}
 
