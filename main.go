@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	"log"
 	"os"
 	"sort"
 	"unicode"
 
 	"github.com/namsral/flag"
 	"github.com/wcharczuk/go-chart"
+
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {
@@ -18,7 +19,7 @@ func main() {
 	var file, graphname, layout string
 
 	flag.StringVar(&file, "file", "", "file which contain the data")
-	flag.StringVar(&graphname, "output", "output.png", "name of the output file")
+	flag.StringVar(&graphname, "output", "graph.png", "name of the output file")
 	flag.StringVar(&layout, "layout", "alpha", "values layout on the graph : alpha, asc")
 	flag.Parse()
 

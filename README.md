@@ -11,7 +11,7 @@ options :
 	-file <folder name>
 		file which will be analysed
 	-output <graph name>
-		name of the output graph
+		name of the output graph (default: graph.png)
 	-layout <layout type>
 		alpha : alphabetical order (default)
 		asc : ascending order
