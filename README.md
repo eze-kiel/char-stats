@@ -26,10 +26,6 @@ This will analyse `text.txt` and display the results in a graph named `graph.png
 Example with *La comédie humaine vol. 1* from Honoré de Balzac, in french :
 ![](graph.png)
 
-## Author
-
-Written by ezekiel.
-
 ## Copyright
 
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>. This is free software: you are free to change and redistribute it.
